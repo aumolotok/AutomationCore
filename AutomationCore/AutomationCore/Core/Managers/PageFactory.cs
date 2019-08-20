@@ -19,5 +19,15 @@ namespace AutomationCore.Core.Managers {
             browser.GoToUrl(urlAttribute.Url);
             return (T)constructor.Invoke(new object[] { browser });      
         }
+
+        public static T OpenByAction<T>(Browser browser, Action action) {
+            action.Invoke();
+            var pageType = typeof(T);
+
+            var constructor = pageType.GetConstructor(new[] { typeof(Browser) });
+            var urlAttribute = (PageUrlAttribute)pageType.GetCustomAttributes(typeof(PageUrlAttribute), false).FirstOrDefault();
+
+            return (T)constructor.Invoke(new object[] { browser });
+        }
     }
 }

@@ -11,5 +11,11 @@ namespace AutomationCore.Core.Classes.Pages {
 
         [FindsBy(How = How.CssSelector, Using = "div.home-arrow__search-wrapper")]
         public DivElement SearchDiv => FindElement<DivElement>();
+
+        [FindsBy(How = How.XPath, Using = ".//a[text()='Музыка']")]
+        public ButtonElement MusicButton => FindElement<ButtonElement>();
+
+        [FindsBy(How = How.XPath, Using = ".//button[./span[text()='Найти']]")]
+        public ButtonElement SearchButton => FindElement<ButtonElement>();
     }
 }
