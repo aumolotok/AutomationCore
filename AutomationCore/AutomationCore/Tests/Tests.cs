@@ -16,13 +16,13 @@ namespace AutomationCore.Tests {
 
         [NUnit.Framework.Test]
         public void Test() {
-            var page = new YandexPage(browser);
+            var page = PageFactory.OpenPage<YandexPage>(browser);
             page.SearchDiv.SearchField.InsertText("кошка");
         }
 
         [NUnit.Framework.Test]
         public void Test2() {
-            var page = new YandexPage(browser);
+            var page = PageFactory.OpenPage<YandexPage>(browser);
             page.SearchDiv.SearchField.InsertText("кошка");
         }
     }

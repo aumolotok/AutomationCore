@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Attributes\PageUrlAttribute.cs" />
     <Compile Include="Core\Classes\Browser.cs" />
     <Compile Include="Core\Classes\Elements\BaseElement.cs" />
     <Compile Include="Core\Classes\Elements\DivElement.cs" />
@@ -65,17 +66,18 @@
     <Compile Include="Core\Classes\Pages\IPage.cs" />
     <Compile Include="Core\Classes\Pages\PageExtentions.cs" />
     <Compile Include="Core\Managers\BrowserManagercs.cs" />
+    <Compile Include="Core\Managers\PageFactory.cs" />
     <Compile Include="Core\Managers\Waitings.cs" />
     <Compile Include="PageObjects\YandexPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\Test2.cs" />
-    <Compile Include="Tests\Test3.cs" />
     <Compile Include="Tests\TestBase.cs" />
     <Compile Include="Tests\Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
